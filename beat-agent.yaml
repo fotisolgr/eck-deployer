@@ -1,0 +1,86 @@
+apiVersion: beat.k8s.elastic.co/v1beta1
+kind: Beat
+metadata:
+  name: filebeat
+spec:
+  type: filebeat
+  version: 8.2.2 # version will be generated when running `./eck-deployer.sh`
+  elasticsearchRef:
+    name: elasticsearch
+  kibanaRef:
+    name: kibana
+  config:
+    filebeat.inputs:
+      - type: container
+        multiline.type: pattern
+        multiline.pattern: '^[[:space:]]'
+        multiline.negate: false
+        multiline.match: after
+        paths:
+          - /var/log/containers/*.log
+    processors:
+      - drop_fields:
+          fields: ["host.name", "ecs.version", "agent.version", "agent.type", "agent.id", "agent.ephemeral_id", "agent.hostname", "agent.name", "input.type", "stream", "log.offset", "log.flags"]
+      # https://discuss.elastic.co/t/docker-logs-includes-unreadable-in-kibana/303196/4
+      - decode_json_fields:
+          fields: ["message"]
+          process_array: false
+          max_depth: 2
+          target: ""
+          overwrite_keys: true
+      - script:
+          lang: javascript
+          source: >
+            function process(event){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              var regex = new RegExp('\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])','g');
+              var clean = event.Get('message');
+              clean = clean.replace(regex, '');
+              event.Put('message',clean);
+              return event;
+            }
+
+  daemonSet:
+    podTemplate:
+      metadata:
+        labels:
+          app: filebeat
+      spec:
+        dnsPolicy: ClusterFirstWithHostNet
+        hostNetwork: true
+        securityContext:
+          runAsUser: 0
+        containers:
+          - name: filebeat
+            volumeMounts:
+              - name: varlogcontainers
+                mountPath: /var/log/containers
+              - name: varlogpods
+                mountPath: /var/log/pods
+              - name: varlibdockercontainers
+                mountPath: /var/lib/docker/containers
+        volumes:
+          - name: varlogcontainers
+            hostPath:
+              path: /var/log/containers
+          - name: varlogpods
+            hostPath:
+              path: /var/log/pods
+          - name: varlibdockercontainers
+            hostPath:
+              path: /var/lib/docker/containers

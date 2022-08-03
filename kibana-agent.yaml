@@ -1,0 +1,17 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: kibana
+spec:
+  version: 8.2.2 # version will be generated when running `./eck-deployer.sh`
+  count: 1 # number of Kibana agents to deploy
+  podTemplate:
+    metadata:
+      labels:
+        app: kibana
+  elasticsearchRef:
+    name: elasticsearch
+  http:
+    service:
+      spec:
+        type: LoadBalancer
