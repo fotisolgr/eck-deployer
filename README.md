@@ -4,6 +4,8 @@ This directory includes all scripts needed for setting up a working ECK inside a
 
 ## Prerequisites
 
+
+
 [Kubernetes](https://kubernetes.io/docs/setup/)
 
 [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
