@@ -1,10 +1,13 @@
+
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: eck-deployer
+  name: "eck-deployer"
+  description: ECK wrapper bash script to deploy Elasticsearch, Filebeat & Kibana to collect logs from all available pods
   annotations:
+    backstage.io/kubernetes-id: eck-deployer
     github.com/project-slug: fotisolgr/eck-deployer
 spec:
-  type: other
-  lifecycle: unknown
-  owner: guests
+  type: service
+  owner: user:fsoldatos
+  lifecycle: experimental
