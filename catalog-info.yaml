@@ -9,5 +9,5 @@ metadata:
     github.com/project-slug: fotisolgr/eck-deployer
 spec:
   type: service
-  owner: user:fsoldatos
+  owner: user:fotisolgr
   lifecycle: experimental
