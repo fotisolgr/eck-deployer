@@ -18,6 +18,7 @@ spec:
         multiline.match: after
         paths:
           - /var/log/containers/*.log
+    # TODO: investigate processors
     processors:
       - drop_fields:
           fields: ["host.name", "ecs.version", "agent.version", "agent.type", "agent.id", "agent.ephemeral_id", "agent.hostname", "agent.name", "input.type", "stream", "log.offset", "log.flags"]
