@@ -14,3 +14,7 @@ spec:
   type: service
   owner: user:fotisolgr
   lifecycle: experimental
+  providesApis:
+    - users-api
+  consumesApis:
+    - gcloud-api
