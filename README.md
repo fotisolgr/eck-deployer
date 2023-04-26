@@ -22,3 +22,4 @@ This directory includes all scripts needed for setting up a working ECK inside a
 [kibana-agent](./kibana-agent.yaml),k8s manifest for a single `kibana` CRD.
 
 [beat-agent](./beat-agent.yaml), k8s manifest for a single `beat` CRD.
+
