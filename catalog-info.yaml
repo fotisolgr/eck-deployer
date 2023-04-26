@@ -16,6 +16,7 @@ spec:
   lifecycle: experimental
   dependsOn:
     - component:default/tote
+    - resource:default/postgres-db
   providesApis:
     - users-api
   consumesApis:
