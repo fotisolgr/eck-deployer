@@ -14,6 +14,8 @@ spec:
   type: service
   owner: user:fotisolgr
   lifecycle: experimental
+  dependsOn:
+    - component:default/tote
   providesApis:
     - users-api
   consumesApis:
