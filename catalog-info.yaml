@@ -10,9 +10,6 @@ metadata:
   tags:
     - elastic-search
     - kubernetes
-    - operator
-    - cloud-native
-    - bash
 spec:
   type: service
   owner: user:fotisolgr
