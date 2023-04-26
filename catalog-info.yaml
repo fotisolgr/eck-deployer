@@ -8,7 +8,6 @@ metadata:
     backstage.io/kubernetes-id: eck-deployer
     github.com/project-slug: fotisolgr/eck-deployer
   tags:
-    tags:
     - elastic-search
     - kubernetes
     - operator
