@@ -8,6 +8,7 @@ metadata:
     backstage.io/kubernetes-id: eck-deployer
     github.com/project-slug: fotisolgr/eck-deployer
   tags:
+    - quarkus
     - v0.1.0
     - v0.1.1
 spec:
