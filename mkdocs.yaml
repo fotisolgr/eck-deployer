@@ -8,8 +8,11 @@ nav:
 
 plugins:
   - techdocs-core
-  - git-revision-date-localized:
-      type: tag
+  - git-committers:
+      repo_url: https://github.com/fotisolgr/eck-deployer.git
+      tag_order: descending
+#   - git-revision-date-localized:
+#       type: tag
   
 theme:
   name: material
