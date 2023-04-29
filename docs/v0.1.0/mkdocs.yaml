@@ -1,4 +1,4 @@
-site_name: versions/v0.1.0
+site_name: ECK Deployer documentation v0.1.0
 
 nav:
-  - Reference: "reference.md"
+  - Reference: reference.md
