@@ -1,0 +1,26 @@
+site_name: ECK Deployer documentation
+repo_url: https://github.com/fotisolgr/eck-deployer
+
+nav:
+  - Home: home.md
+  - About: about.md
+  - Contact: contact.md
+
+plugins:
+  - techdocs-core
+  - git-revision-date-localized:
+      type: tag
+  
+theme:
+  name: material
+  features:
+    - toc.integrate
+
+markdown_extensions:
+  - pymdownx.extra
+  - pymdownx.highlight
+  - pymdownx.emoji
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist
