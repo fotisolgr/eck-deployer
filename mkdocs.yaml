@@ -12,7 +12,7 @@ nav:
 
 plugins:
   - techdocs-core
-  - mkdocs-git-revision-date-localized-plugin:
+#   - mkdocs-git-revision-date-localized-plugin:
 #   - search
 #   - git-committers:
 #       repo_url: https://github.com/fotisolgr/eck-deployer.git
