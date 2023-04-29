@@ -2,20 +2,16 @@ site_name: ECK Deployer documentation
 repo_url: https://github.com/fotisolgr/eck-deployer
 
 nav:
-  - Home: home.md
-  - About: about.md
-  - Contact: contact.md
+  - Intro: 'index.md'
+  - Authentication: 'authentication.md'
+  - API:
+    - v0.1.0: '!include ./v0.1.0/mkdocs.yml'
+    - v0.1.1: '!include ./v0.1.1/mkdocs.yml'
+    
 plugins:
   - techdocs-core
-#   - mkdocs-git-revision-date-localized-plugin:
-#   - search
-#   - git-committers:
-#       repo_url: https://github.com/fotisolgr/eck-deployer.git
-#       tag_order: descending
-#       max_tags: 5
-#   - git-revision-date-localized:
-#       type: tag
-  
+  - monorepo
+
 theme:
   name: material
   features:
