@@ -6,7 +6,8 @@ metadata:
   description: ECK wrapper bash script to deploy Elasticsearch, Filebeat & Kibana to collect logs from all available pods
   annotations:
     backstage.io/kubernetes-id: eck-deployer
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://github.com/fotisolgr/eck-deployer/tree/v1
+    backstage.io/techdocs-ref: url:https://github.com/fotisolgr/eck-deployer/tree/v2
     github.com/project-slug: fotisolgr/eck-deployer
   tags:
     - elastic-search
