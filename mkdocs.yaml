@@ -5,8 +5,8 @@ nav:
   - Intro: 'index.md'
   - Contact: 'contact.md'
   - API:
-    - v0.1.0: v0.1.0/mkdocs.yaml
-    - v0.1.1: v0.1.1/mkdocs.yaml
+    - v0.1.0: v0.1.0/reference.md
+    - v0.1.1: v0.1.1/reference.md
     
 plugins:
   - techdocs-core
