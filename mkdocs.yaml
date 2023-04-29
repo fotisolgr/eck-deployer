@@ -6,7 +6,7 @@ nav:
   - About: about.md
   - Contact: contact.md
   - Versions:
-      - Latest: index.md
+    - Latest: index.md
       {% for tag in tags %}
       - {{ tag }}: index.md?tag={{ tag }}
       {% endfor %}
