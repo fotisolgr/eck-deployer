@@ -10,6 +10,7 @@ nav:
     
 plugins:
   - techdocs-core
+  - monorepo
   
 theme:
   name: material
