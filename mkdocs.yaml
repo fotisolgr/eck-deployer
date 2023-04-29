@@ -3,7 +3,7 @@ repo_url: https://github.com/fotisolgr/eck-deployer
 
 nav:
   - Intro: 'index.md'
-  - Authentication: 'authentication.md'
+  - Contact: 'contact.md'
   - API:
     - v0.1.0: '!include ./v0.1.0/mkdocs.yml'
     - v0.1.1: '!include ./v0.1.1/mkdocs.yml'
