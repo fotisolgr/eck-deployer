@@ -8,9 +8,11 @@ nav:
 
 plugins:
   - techdocs-core
+  - search
   - git-committers:
       repo_url: https://github.com/fotisolgr/eck-deployer.git
       tag_order: descending
+      max_tags: 5
 #   - git-revision-date-localized:
 #       type: tag
   
