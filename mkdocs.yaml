@@ -5,11 +5,6 @@ nav:
   - Home: home.md
   - About: about.md
   - Contact: contact.md
-  - Versions:
-    - Latest: index.md
-    - tag : index.md?tag=v0.1.2
-      
-
 plugins:
   - techdocs-core
 #   - mkdocs-git-revision-date-localized-plugin:
