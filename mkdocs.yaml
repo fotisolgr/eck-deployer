@@ -7,7 +7,7 @@ nav:
   - Contact: contact.md
   - Versions:
     - Latest: index.md
-      - tag : index.md?tag=v0.1.2
+    - tag : index.md?tag=v0.1.2
       
 
 plugins:
